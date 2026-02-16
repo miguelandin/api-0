@@ -1,15 +1,15 @@
-import { Router } from 'express';
-import cursosRoutes from './cursos.routes.js';
+import { Router } from 'express'
+import tasksRoutes from './tasks.routes.js'
 
 const router = Router();
 
-router.use('/cursos/programacion', cursosRoutes);
+router.use('/tasks', tasksRoutes);
 
 router.get('/', (req, res) => {
     res.json({
-        mensaje: 'API de Cursos v1.0',
+        menssage: 'Tasks API v1.0',
         endpoints: {
-            cursos: '/api/cursos/programacion',
+            tasks: '/api/tasks/0',
             health: '/health'
         }
     });
